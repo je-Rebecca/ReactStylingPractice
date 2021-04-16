@@ -8,28 +8,6 @@
 
 import React from "react";
 import ReactDOM from "react-dom";
+import App from "./components/App";
 
-let greeting;
-let time = new Date().getHours();
-
-const customStyle = {
-  color: ""
-};
-
-if (time < 12) {
-  greeting = "Good morning";
-  customStyle.color = "red";
-} else if (time < 18) {
-  greeting = "Good Afternoon";
-  customStyle.color = "green";
-} else {
-  greeting = "Good evening";
-  customStyle.color = "blue";
-}
-
-ReactDOM.render(
-  <div className="heading" style={customStyle}>
-    {greeting}
-  </div>,
-  document.getElementById("root")
-);
+ReactDOM.render(<App />, document.getElementById("root"));
